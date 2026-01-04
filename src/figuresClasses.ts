@@ -10,10 +10,8 @@ export interface Figure {
 export class Triangle implements Figure {
   shape: Shape = 'triangle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public readonly color: Color,
     private readonly a: number,
     private readonly b: number,
     private readonly c: number,
@@ -44,10 +42,8 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   shape: Shape = 'circle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public readonly color: Color,
     private readonly radius: number,
   ) {
     if (radius <= 0) {
@@ -65,10 +61,8 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   shape: Shape = 'rectangle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public readonly color: Color,
     private readonly width: number,
     private readonly height: number,
   ) {
